@@ -24,15 +24,15 @@ export default function UserTabGroup() {
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
-      <TabGroup selectedIndex={selectedIndex} onChange={handleTabChange}>
-        <TabList className="flex gap-2 bg-gray-100 p-1 rounded-lg shadow-inner">
+    <div className="mx-auto px-4 py-8">
+      <TabGroup selectedIndex={selectedIndex} onChange={handleTabChange} className="w-full">
+        <TabList className="w-full flex gap-2 bg-gray-100 p-1 rounded-lg shadow-inner flex-wrap xl:flex-nowrap">
           {tabs.map((tab) => (
             <Tab
               key={tab.label}
               className={({ selected }) =>
                 clsx(
-                  'w-full px-4 py-2 text-sm font-medium rounded-md focus:outline-none transition-all',
+                  'w-full px-4 py-2 text-xl lg:text-sm font-medium rounded-md focus:outline-none transition-all',
                   selected
                     ? 'bg-white shadow text-blue-600'
                     : 'text-gray-600 hover:text-blue-600 hover:bg-white/60',
@@ -43,7 +43,7 @@ export default function UserTabGroup() {
             </Tab>
           ))}
         </TabList>
-        <TabPanels className="mt-6">
+        <TabPanels>
           {tabs.map((tab) => (
             <TabPanel key={tab.label}>{tab.component}</TabPanel>
           ))}

@@ -13,6 +13,7 @@ export default function UserHeader({ user }: IUserHeaderModel) {
         width={64}
         height={64}
         priority
+        unoptimized
       />
       <h2 className="text-2xl font-bold">
         {user.name.first} {user.name.last}
