@@ -5,9 +5,9 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: '**',
+        hostname: 'randomuser.me',
         port: '',
-        pathname: '**',
+        pathname: '/api/portraits/w**',
         search: '',
       },
     ],

@@ -32,6 +32,7 @@ export default function UserGrid({
             width={64}
             height={64}
             priority
+            unoptimized
           />
           <div>
             <p className="font-semibold">
