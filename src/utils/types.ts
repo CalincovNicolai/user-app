@@ -158,3 +158,5 @@ export interface IPaginationModel {
   onPageChange: (page: number) => void;
   disabled?: boolean;
 }
+
+export type UserDetailPageParams = Promise<{ uuid: string }>;
