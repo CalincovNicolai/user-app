@@ -59,7 +59,6 @@ No any documentation yet.
 - 📄 **Paginated list** with custom page size
 - 🧠 **Data caching** in `localStorage`
 - 🎭 **Headless UI** for accessible dropdowns and tabs
-- 💨 **Framer Motion** animations on transitions
 - 🧪 **Tested** with Jest and Testing Library
 
 ## 🧱 Tech Stack
