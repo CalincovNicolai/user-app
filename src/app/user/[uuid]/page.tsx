@@ -3,18 +3,11 @@ import { fetchUsers } from '@/api/fetchUsers';
 import Link from 'next/link';
 import UserDetailsCard from '@/components/user/details/UserDetailsCard';
 
-type PageProps = {
-  params: {
-    uuid: string;
-  };
-};
-
-export default async function UserDetailPage({ params }: PageProps) {
+export default async function UserDetailPage({}: { params: { uuid: string } }) {
   // Cannot get the specific user by id because the random api everytime randomizes the data on fetch
   // Also, cannot use the user list from localStorage because on server side it doesn't know about it
   // I'm just getting 1 user from api and display here
-  const count = params.uuid ? 1 : 0;
-  const userList = await fetchUsers(count);
+  const userList = await fetchUsers(1);
   const user = userList[0];
 
   if (!user) return notFound();
