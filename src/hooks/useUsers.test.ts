@@ -40,7 +40,6 @@ describe('useUsers', () => {
 
     const { result } = renderHook(() => useUsers());
 
-    // Allow useEffect to run
     await act(() => Promise.resolve());
 
     expect(result.current.users).toEqual(mockUsers);
@@ -139,9 +138,9 @@ describe('useUsers', () => {
     const lastRefresh = result.current;
 
     act(() => {
-      result.current.handleRefresh(); // should be ignored
+      result.current.handleRefresh();
     });
 
-    expect(result.current).toBe(lastRefresh); // should not update
+    expect(result.current).toBe(lastRefresh);
   });
 });
